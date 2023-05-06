@@ -89,5 +89,5 @@ class userinfo {
         let data = await res.json();
         return data;
       
-    }
+    };
 }
