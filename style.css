@@ -133,6 +133,12 @@ footer {
     footer {
         margin-top: 1rem;
     }
+
+    div{
+        max-width: 89svw;
+    }
+
+    
 }
 
 /* Стили для средних экранов (планшетов) */
