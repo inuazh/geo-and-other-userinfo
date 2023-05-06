@@ -12,6 +12,7 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
+    border-bottom-right-radius: 150px;
 }
 
 h1 {
@@ -25,7 +26,7 @@ h1 {
 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin: 1rem 0;
+    margin: 0.7rem 0;
     padding: 0 1rem;
     text-align: justify;
 }
@@ -35,7 +36,10 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
+    border-top-left-radius: 30px;
 }
+
+
 
 footer p {
     margin: 0;
@@ -123,22 +127,36 @@ footer {
 
 @media only screen and (max-width: 599px) {
     h1 {
-        font-size: 1.5rem;
-    }
-
-    p {
         font-size: 1rem;
     }
 
-    footer {
-        margin-top: 1rem;
+    p {
+        font-size: 0.7rem;
     }
 
-    div{
+    div>p {
+        margin-top: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    div {
         max-width: 89svw;
     }
 
-    
+    body{
+        max-height: max-content;
+    }
+
+    .button {
+
+        padding: 10px 20px;
+        font-size: small;
+
+      
+
+    }
+
+
 }
 
 /* Стили для средних экранов (планшетов) */
@@ -175,6 +193,47 @@ footer {
         left: 0;
         width: 100%;
         animation: slideup 1s forwards;
+
     }
 }
 
+button {
+    position: relative;
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    padding: 20px 40px;
+    background-color: #d400ff;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    animation: none;
+}
+
+.button:hover::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 132);
+    transform: translate(-50%, -50%);
+    animation: cursor-follower 0.2s infinite forwards;
+}
+
+@keyframes cursor-follower {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.5);
+        opacity: 0;
+    }
+}
