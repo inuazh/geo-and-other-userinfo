@@ -63,9 +63,9 @@ h1 {
 
 /* Переливающийся фон */
 body {
-    background-image: linear-gradient(to bottom right, #ff6600, #ff33cc, #9933ff, #0066ff, #00cc66);
+    background-image: linear-gradient(to bottom right, #ff6600, #ff0080, #9933ff, #00ffd9, #00cc66);
     background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
+    animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -156,12 +156,6 @@ footer {
 /* Стили для больших экранов (настольных компьютеров) */
 @media only screen and (min-width: 960px) {
 
-    /* Переливающийся фон */
-    body {
-        background-image: linear-gradient(to bottom right, #ff6600, #ff33cc, #9933ff, #0066ff, #00cc66);
-        background-size: 400% 400%;
-        animation: gradient 20s ease infinite;
-    }
 
     /* Анимация для параграфов */
     p {
