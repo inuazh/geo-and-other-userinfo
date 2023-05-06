@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100svh;
 }
 
 header {
@@ -131,7 +132,6 @@ footer {
     }
 
     footer {
-        position: static;
         margin-top: 1rem;
     }
 }
