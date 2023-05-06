@@ -4,110 +4,178 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
+}
 
-  header {
+header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
-  }
+}
 
-  h1 {
+h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 0.1em;
-    text-shadow: 2px 2px #888;
-  }
+    text-shadow: 2px 2px rgba(155, 155, 155, .5);
+}
 
-  p {
+p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 1rem 0;
     padding: 0 1rem;
     text-align: justify;
-  }
+}
 
-  footer {
+footer {
     background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
-  }
+}
 
-  footer p {
+footer p {
     margin: 0;
     font-size: 1rem;
     font-style: italic;
-  }
+}
 
-  /* Анимация для заголовка */
-  h1 {
-    animation: shine 3s infinite;
-  }
+/* Анимация для заголовка */
+h1 {
+    animation: shine 6s infinite;
+}
 
-  @keyframes shine {
+@keyframes shine {
     0% {
-      text-shadow: 2px 2px #888;
+        text-shadow: 1px 2px #ee00ff;
     }
-    50% {
-      text-shadow: 3px 3px #ccc;
-    }
-    100% {
-      text-shadow: 2px 2px #888;
-    }
-  }
 
-  /* Переливающийся фон */
-  body {
+    50% {
+        text-shadow: 2px 3px #ff0000;
+    }
+
+    100% {
+        text-shadow: 1px 2px #ff0037;
+    }
+}
+
+/* Переливающийся фон */
+body {
     background-image: linear-gradient(to bottom right, #ff6600, #ff33cc, #9933ff, #0066ff, #00cc66);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
-  }
+}
 
-  @keyframes gradient {
+@keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
-  /* Анимация для параграфов */
-  p {
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Анимация для параграфов */
+p {
     color: #fff;
     opacity: 0;
     animation: fadein 1s forwards;
-  }
+}
 
-  @keyframes fadein {
+@keyframes fadein {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-    to {
-      opacity: 1;
-    }
-  }
 
-  /* Анимация для футера */
-  footer {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимация для футера */
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     animation: slideup 1s forwards;
-  }
+}
 
-  @keyframes slideup {
+@keyframes slideup {
     from {
-      transform: translateY(100%);
+        transform: translateY(100%);
     }
+
     to {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
+}
+
+
+
+@media only screen and (max-width: 599px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    footer {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+/* Стили для средних экранов (планшетов) */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    footer {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+/* Стили для больших экранов (настольных компьютеров) */
+@media only screen and (min-width: 960px) {
+
+    /* Переливающийся фон */
+    body {
+        background-image: linear-gradient(to bottom right, #ff6600, #ff33cc, #9933ff, #0066ff, #00cc66);
+        background-size: 400% 400%;
+        animation: gradient 20s ease infinite;
+    }
+
+    /* Анимация для параграфов */
+    p {
+        opacity: 0;
+        animation: fadein 1s forwards;
+    }
+
+    /* Анимация для футера */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        animation: slideup 1s forwards;
+    }
+}
+
