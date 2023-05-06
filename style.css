@@ -1,0 +1,113 @@
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px #888;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  /* Анимация для заголовка */
+  h1 {
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      text-shadow: 2px 2px #888;
+    }
+    50% {
+      text-shadow: 3px 3px #ccc;
+    }
+    100% {
+      text-shadow: 2px 2px #888;
+    }
+  }
+
+  /* Переливающийся фон */
+  body {
+    background-image: linear-gradient(to bottom right, #ff6600, #ff33cc, #9933ff, #0066ff, #00cc66);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Анимация для параграфов */
+  p {
+    color: #fff;
+    opacity: 0;
+    animation: fadein 1s forwards;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Анимация для футера */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation: slideup 1s forwards;
+  }
+
+  @keyframes slideup {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
