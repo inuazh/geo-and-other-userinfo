@@ -16,7 +16,7 @@ async function displayData() {
     let effectiveType = (await info.browserInfo()).connection.effectiveType;
 
     // Отображаем данные на странице
-    document.getElementById("browserInfo").innerText = "Тип соединения: " + effectiveType;
+    document.getElementById("browserInfo").innerText = "Поколение соединения: " + effectiveType;
     document.getElementById("referrer").innerText = "Страница с которой вы пришли: " + referrer;
     document.getElementById("previousSites").innerText = "Количество сайтов перед посещением этой страницы: " + previousSites;
     document.getElementById("appVersion").innerText = "Система и движки: " + appVersion;
